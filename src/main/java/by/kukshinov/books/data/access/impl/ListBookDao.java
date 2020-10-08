@@ -2,7 +2,6 @@ package by.kukshinov.books.data.access.impl;
 
 import by.kukshinov.books.data.access.BookDao;
 import by.kukshinov.books.model.Book;
-import by.kukshinov.books.model.BookType;
 import by.kukshinov.books.model.ModelException;
 import by.kukshinov.books.data.specefication.SearchSpecification;
 import by.kukshinov.books.data.factory.SearchSpecificationCreator;
@@ -42,5 +41,9 @@ public class ListBookDao implements BookDao {
         SortBookSpecification sortSpecification = creator.createSortSpecification(param);
 	   return sortSpecification.sort(localBookStorage);
     }
+
+    @Override
+    public int getSize() {
+        return localBookStorage.size();
+    }
 }
-//todo creator class that fills in data to list

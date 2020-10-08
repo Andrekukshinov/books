@@ -16,16 +16,26 @@ import java.util.List;
 
 public class SearchSpecificationTest {
     private final List<Book> originalBooks = new ArrayList<>();
+
+    private final Book potterRowling = new Book("J.K. Rowling", 324, "Harry Potter and Philosophy Stone", "Arsev", BookType.FANTASY);
+    private final Book greenMile = new Book("S. King", 956, "Green Mile", "Booka", BookType.FANTASY);
+    private final Book it = new Book("S. King", 324, "IT", "3DO", BookType.HORROR);
+    private final Book jaws = new Book("S. Spielberg", 575, "Jaws", "3DO", BookType.HORROR);
+    private final Book potterRouling = new Book("J.K. Rouwling", 324, "Harry Potter and Philosphy Stone", "Arsev", BookType.FANTASY);
+
+
     {
-	   originalBooks.add(new Book("J.K. Rowling", 324, "Harry Potter and Philosophy Stone", "Arsev", BookType.FANTASY));
-	   originalBooks.add(new Book("S. King", 956, "Green Mile", "Booka", BookType.FANTASY));
-	   originalBooks.add(new Book("S. King", 324, "IT", "3DO", BookType.HORROR));
-	   originalBooks.add(new Book("S. Spielberg", 575, "Jaws", "3DO", BookType.HORROR));
-	   originalBooks.add(new Book("J.K. Rouwling", 324, "Harry Potter and Philosphy Stone", "Arsev", BookType.FANTASY));
+	   originalBooks.add(potterRowling);
+	   originalBooks.add(greenMile);
+	   originalBooks.add(it);
+	   originalBooks.add(jaws);
+	   originalBooks.add(potterRouling);
     }
+
     private final Book bookToLook4InEveryTest = new Book("J.K. Rouwling", 324, "Harry Potter and Philosphy Stone", "Arsev", BookType.FANTASY);
     private final Book bookToLook4NotTileAndAuthor = new Book("J.K. Rowling", 324, "Harry Potter and Philosophy Stone", "Arsev", BookType.FANTASY);
     private final Book bookToLook4ByPages = new Book("S. King", 324, "IT", "3DO", BookType.HORROR);
+
     @Test
     public void shouldReturnBookListByTitle() throws ModelException {
 	   //given
@@ -52,6 +62,7 @@ public class SearchSpecificationTest {
 	   //then
 	   Assert.assertEquals(toBeComparedWith, resultList);
     }
+
     @Test
     public void shouldReturnBookListByPages() throws ModelException {
 	   //given
@@ -66,6 +77,7 @@ public class SearchSpecificationTest {
 	   //then
 	   Assert.assertEquals(toBeComparedWith, resultList);
     }
+
     @Test
     public void shouldReturnBookListByAuthor() throws ModelException {
 	   //given

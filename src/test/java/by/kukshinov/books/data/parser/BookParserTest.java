@@ -9,18 +9,18 @@ import org.junit.Test;
 
 public class BookParserTest {
     private final String bookString = "Book{author=Rowling, pages=234, title=Harry Potter and Phil stone, publisher=arsev, type=FANTASY}";
+    private final Book book = new Book("Rowling", 234, "Harry Potter and Phil stone", "arsev", BookType.FANTASY);
 
     @Test
     public void shouldParseStringDataOfSpecifiedFormatToBook() throws ModelException {
-        //given
+	   //given
 	   String localBookString = bookString;
 	   BookParser parser = new BookParser();
-	   Book original = new Book("Rowling", 234, "Harry Potter and Phil stone", "arsev", BookType.FANTASY);
 	   //when
 	   Book resBook = parser.parse(localBookString);
 	   //then
 
-	   Assert.assertEquals(original, resBook);
+	   Assert.assertEquals(book, resBook);
 
     }
 }

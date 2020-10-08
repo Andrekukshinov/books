@@ -13,4 +13,5 @@ public interface BookDao {
     List<Book> findBooks(SearchParam searchParam, String value) throws ModelException;
     void remove(Book book) throws ModelException;
     List<Book> sortArray(SortParam sortParam);
+    int getSize();
 }

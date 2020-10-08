@@ -16,4 +16,4 @@ package by.kukshinov.books.data.access.impl;//package by.kukshinov.books.data.ac
 //    }
 //
 //}
-// TODO: 07.10.2020: test for ListDAO
+

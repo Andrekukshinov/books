@@ -1,7 +1,6 @@
 package by.kukshinov.books.data.specefication;
 
 
-import by.kukshinov.books.data.specefication.SortBookSpecification;
 import by.kukshinov.books.model.comporators.AuthorComparator;
 import by.kukshinov.books.model.comporators.PagesComparator;
 import by.kukshinov.books.model.comporators.PublisherComparator;
@@ -21,12 +20,18 @@ import java.util.List;
 
 public class SortBookSpecificationTest {
     private final List<Book> originalBooks = new ArrayList<>();
+    private final Book potterRowling = new Book("J.K. Rowling", 324, "Harry Potter and Philosophy Stone", "Arsev", BookType.FANTASY);
+    private final Book greenMile = new Book("S. King", 956, "Green Mile", "Booka", BookType.FANTASY);
+    private final Book it = new Book("S. King", 324, "IT", "3DO", BookType.HORROR);
+    private final Book jaws = new Book("S. Spielberg", 575, "Jaws", "3DO", BookType.HORROR);
+    private final Book potterRouling = new Book("J.K. Rouwling", 324, "Harry Potter and Philosphy Stone", "Arsev", BookType.FANTASY);
+
     {
-	   originalBooks.add(new Book("J.K. Rowling", 324, "Harry Potter and Philosophy Stone", "Arsev", BookType.FANTASY));
-	   originalBooks.add(new Book("S. King", 956, "Green Mile", "Booka", BookType.FANTASY));
-	   originalBooks.add(new Book("S. King", 324, "IT", "3DO", BookType.HORROR));
-	   originalBooks.add(new Book("S. Spielberg", 575, "Jaws", "3DO", BookType.HORROR));
-	   originalBooks.add(new Book("J.K. Rouwling", 324, "Harry Potter and Philosphy Stone", "Arsev", BookType.FANTASY));
+	   originalBooks.add(potterRowling);
+	   originalBooks.add(greenMile);
+	   originalBooks.add(it);
+	   originalBooks.add(jaws);
+	   originalBooks.add(potterRouling);
     }
     @Test
     public void shouldReturnSortedArrayPublisher() {
