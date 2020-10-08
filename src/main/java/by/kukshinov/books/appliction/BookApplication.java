@@ -20,6 +20,7 @@ import org.apache.log4j.Logger;
 public class BookApplication {
     private static final Logger LOGGER = Logger.getLogger(BookApplication.class);
     public static void main(String[] args){
+        //comment
         LOGGER.info("started");
         DataAcquirerCreator dataAcquirerCreator = new FileDataAcquirerCreator();
         DataAcquirer acquirer = dataAcquirerCreator.createDataAcquirer();
