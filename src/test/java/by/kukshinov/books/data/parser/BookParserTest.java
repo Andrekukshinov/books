@@ -21,5 +21,6 @@ public class BookParserTest {
 	   //then
 
 	   Assert.assertEquals(original, resBook);
+
     }
 }
