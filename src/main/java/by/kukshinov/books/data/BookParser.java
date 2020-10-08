@@ -67,19 +67,3 @@ public class BookParser {
     }
 
 }
-
-
-//class N {
-//    public static void main(String[] args) throws IOException {
-//	   BufferedReader reader = new BufferedReader(new FileReader("tst.txt"));
-//	   RandomAccessFile access = new RandomAccessFile("tst.txt", "rw");
-//	   int length = 0;
-//	   String temp;
-//	   while ((temp = reader.readLine()) != null && !temp.equals("1234567890das")) {
-//		  length += temp.length() + 1;
-//	   }
-//	   access.skipBytes(length + 2);
-//	   access.write("boyz".getBytes());
-//
-//    }
-//}
