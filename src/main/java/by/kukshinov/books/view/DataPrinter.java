@@ -1,6 +1,6 @@
 package by.kukshinov.books.view;
 
-import by.kukshinov.books.model.entity.Book;
+import by.kukshinov.books.model.Book;
 
 import java.util.List;
 

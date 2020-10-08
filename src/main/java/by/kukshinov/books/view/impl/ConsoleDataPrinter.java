@@ -1,7 +1,7 @@
 package by.kukshinov.books.view.impl;
 
 
-import by.kukshinov.books.model.entity.Book;
+import by.kukshinov.books.model.Book;
 import by.kukshinov.books.view.DataPrinter;
 import org.apache.log4j.Logger;
 

@@ -1,10 +1,43 @@
-Book{author=J.K. Rouwling, pages=321, title=Harry Potter and Philosphy Stone, publisher=Arsev, type=FANTASY}Book{author=J.K. Rowling, pages=324, title=Harry Potter and Philosophy Stone, publisher=Arsev, type=FANTASY}Book{author=S. King, pages=956, title=Green Mile, publisher=Booka, type=FANTASY}Book{author=S. King, pages=324, title=IT, publisher=3DO, type=HORROR}Book{author=S. Spielberg, pages=575, title=Jaws, publisher=3DO, type=HORROR}Book{author=Tolstoy, pages=1267, title=War and peace, publisher=rubashka, type=FANTASY}Book{author=J.K. Rouwling, pages=321, title=Harry Potter and Philosphy Stone, publisher=Arsev, type=FANTASY}Book{author=J.K. Rowling, pages=324, title=Harry Potter and Philosophy Stone, publisher=Arsev, type=FANTASY}Book{author=S. King, pages=956, title=Green Mile, publisher=Booka, type=FANTASY}Book{author=S. King, pages=324, title=IT, publisher=3DO, type=HORROR}Book{author=S. Spielberg, pages=575, title=Jaws, publisher=3DO, type=HORROR}Book{author=J.K. Rouwling, pages=321, title=Harry Potter and Philosphy Stone, publisher=Arsev, type=FANTASY}
+Book{author=J.K. Rowling, pages=234, title=Harry Potter and Phil stone, publisher=arsev, type=FANTASY}
+Book{author=J.K. Rowling, pages=324, title=Harry Potter and Philosophy Stone, publisher=Arsev, type=FANTASY}
+Book{author=J.K. Rowling, pages=234, title=Harry Potter and Phil stone, publisher=arsev, type=FANTASY}
+Book{author=S. King, pages=956, title=Green Mile, publisher=Booka, type=FANTASY}
+Book{author=S. King, pages=324, title=IT, publisher=3DO, type=HORROR}
+Book{author=S. Spielberg, pages=575, title=Jaws, publisher=3DO, type=HORROR}
+Book{author=J.K. Rowling, pages=234, title=Harry Potter and Phil stone, publisher=arsev, type=FANTASY}
+Book{author=J.K. Rowling, pages=324, title=Harry Potter and Philosophy Stone, publisher=Arsev, type=FANTASY}
 Book{author=J.K. Rowling, pages=324, title=Harry Potter and Philosophy Stone, publisher=Arsev, type=FANTASY}
 Book{author=S. King, pages=956, title=Green Mile, publisher=Booka, type=FANTASY}
 Book{author=S. King, pages=324, title=IT, publisher=3DO, type=HORROR}
 Book{author=S. Spielberg, pages=575, title=Jaws, publisher=3DO, type=HORROR}
-Book{author=Tolstoy, pages=1267, title=War and peace, publisher=rubashka, type=FANTASY}
-Book{author=J.K. Rouwling, pages=321, title=Harry Potter and Philosphy Stone, publisher=Arsev, type=FANTASY}
+Book{author=J.K. Rowling, pages=234, title=Harry Potter and Phil stone, publisher=arsev, type=FANTASY}
+Book{author=S. King, pages=956, title=Green Mile, publisher=Booka, type=FANTASY}
+Book{author=S. King, pages=324, title=IT, publisher=3DO, type=HORROR}
+Book{author=S. Spielberg, pages=575, title=Jaws, publisher=3DO, type=HORROR}
+Book{author=J.K. Rowling, pages=234, title=Harry Potter and Phil stone, publisher=arsev, type=FANTASY}
+Book{author=J.K. Rowling, pages=324, title=Harry Potter and Philosophy Stone, publisher=Arsev, type=FANTASY}
+Book{author=J.K. Rowling, pages=324, title=Harry Potter and Philosophy Stone, publisher=Arsev, type=FANTASY}
+Book{author=S. King, pages=956, title=Green Mile, publisher=Booka, type=FANTASY}
+Book{author=S. King, pages=324, title=IT, publisher=3DO, type=HORROR}
+Book{author=S. Spielberg, pages=575, title=Jaws, publisher=3DO, type=HORROR}
+Book{author=J.K. Rowling, pages=234, title=Harry Potter and Phil stone, publisher=arsev, type=FANTASY}
+Book{author=S. King, pages=956, title=Green Mile, publisher=Booka, type=FANTASY}
+Book{author=S. King, pages=324, title=IT, publisher=3DO, type=HORROR}
+Book{author=S. Spielberg, pages=575, title=Jaws, publisher=3DO, type=HORROR}
+Book{author=J.K. Rowling, pages=234, title=Harry Potter and Phil stone, publisher=arsev, type=FANTASY}
+Book{author=J.K. Rowling, pages=324, title=Harry Potter and Philosophy Stone, publisher=Arsev, type=FANTASY}
+Book{author=J.K. Rowling, pages=324, title=Harry Potter and Philosophy Stone, publisher=Arsev, type=FANTASY}
+Book{author=S. King, pages=956, title=Green Mile, publisher=Booka, type=FANTASY}
+Book{author=S. King, pages=324, title=IT, publisher=3DO, type=HORROR}
+Book{author=S. Spielberg, pages=575, title=Jaws, publisher=3DO, type=HORROR}
+Book{author=J.K. Rowling, pages=234, title=Harry Potter and Phil stone, publisher=arsev, type=FANTASY}
+Book{author=J.K. Rowling, pages=324, title=Harry Potter and Philosophy Stone, publisher=Arsev, type=FANTASY}
+Book{author=J.K. Rowling, pages=324, title=Harry Potter and Philosophy Stone, publisher=Arsev, type=FANTASY}
+Book{author=S. King, pages=956, title=Green Mile, publisher=Booka, type=FANTASY}
+Book{author=S. King, pages=324, title=IT, publisher=3DO, type=HORROR}
+Book{author=S. Spielberg, pages=575, title=Jaws, publisher=3DO, type=HORROR}
+Book{author=J.K. Rowling, pages=234, title=Harry Potter and Phil stone, publisher=arsev, type=FANTASY}
+Book{author=J.K. Rowling, pages=324, title=Harry Potter and Philosophy Stone, publisher=Arsev, type=FANTASY}
 Book{author=J.K. Rowling, pages=324, title=Harry Potter and Philosophy Stone, publisher=Arsev, type=FANTASY}
 Book{author=S. King, pages=956, title=Green Mile, publisher=Booka, type=FANTASY}
 Book{author=S. King, pages=324, title=IT, publisher=3DO, type=HORROR}
