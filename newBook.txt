@@ -1,0 +1,1 @@
+Book{author=Tolstoy, pages=1267, title=War and peace, publisher=rubashka, type=FANTASY}
