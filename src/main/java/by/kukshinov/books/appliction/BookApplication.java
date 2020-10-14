@@ -19,7 +19,9 @@ import by.kukshinov.books.view.factory.impl.FileDataPrinterFactory;
 import org.apache.log4j.Logger;
 
 public class BookApplication {
-    private static final Logger LOGGER = Logger.getLogger(BookApplication.class);
+    private static final Logger LOGGER =
+            Logger.getLogger(BookApplication.class);
+
     public static void main(String[] args){
         LOGGER.info("started");
         DataAcquirerCreator dataAcquirerCreator = new FileDataAcquirerCreator();
@@ -28,9 +30,7 @@ public class BookApplication {
         DaoListFiller filler = new DaoListFiller();
         try {
             run(acquirer, bookDAO, filler);
-        } catch (ModelException e) {
-            LOGGER.error(e.getMessage(), e);
-        } catch (IOException e) {
+        } catch (ModelException | IOException e) {
             LOGGER.error(e.getMessage(), e);
         }
     }
@@ -50,5 +50,4 @@ public class BookApplication {
         sortedListResult = bookDAO.sortArray(SortParam.AUTHOR);
         printer.printData(sortedListResult);
     }
-    // TODO: write tests
 }
