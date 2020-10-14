@@ -17,8 +17,8 @@ public class ConsoleDataPrinter implements DataPrinter {
 
     @Override
     public void printData(List<Book> books) {
-	   for (int runner = 0; runner < books.size(); ++runner) {
-		  printData(books.get(runner));
+	   for (Book book : books) {
+		  printData(book);
 	   }
     }
 }

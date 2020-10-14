@@ -1,0 +1,12 @@
+2020-10-14 22:35:21:200 INFO  BookApplication:26 - started
+2020-10-14 22:35:21:232 ERROR BookApplication:34 - Book Book{author=J.K. Rowling, pages=324, title=Harry Potter and Philosophy Stone, publisher=Arsev, type=FANTASY} doesn't exist
+by.kukshinov.books.model.ModelException: Book Book{author=J.K. Rowling, pages=324, title=Harry Potter and Philosophy Stone, publisher=Arsev, type=FANTASY} doesn't exist
+	at by.kukshinov.books.data.access.impl.ListBookDao.remove(ListBookDao.java:34)
+	at by.kukshinov.books.appliction.BookApplication.run(BookApplication.java:49)
+	at by.kukshinov.books.appliction.BookApplication.main(BookApplication.java:32)
+2020-10-14 23:42:38:031 INFO  BookApplication:30 - started
+2020-10-14 23:42:38:096 ERROR BookApplication:40 - Book Book{author=J.K. Rowling, pages=324, title=Harry Potter and Philosophy Stone, publisher=Arsev, type=FANTASY} already exists! 
+by.kukshinov.books.data.access.DaoException: Book Book{author=J.K. Rowling, pages=324, title=Harry Potter and Philosophy Stone, publisher=Arsev, type=FANTASY} already exists! 
+	at by.kukshinov.books.data.access.impl.ListBookDao.addBook(ListBookDao.java:37)
+	at by.kukshinov.books.appliction.BookApplication.run(BookApplication.java:48)
+	at by.kukshinov.books.appliction.BookApplication.main(BookApplication.java:38)

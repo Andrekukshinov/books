@@ -7,8 +7,11 @@ import by.kukshinov.books.data.factory.DataAcquirerCreator;
 import by.kukshinov.books.data.BookParser;
 
 public class FileDataAcquirerCreator implements DataAcquirerCreator {
+
     private static final String FILE_PATH = "storage.txt";
-    private final BookParser parser = new BookParser();
+
+    private static final BookParser parser = new BookParser();
+
     @Override
     public DataAcquirer createDataAcquirer() {
 	   return new FileDataAcquirer(FILE_PATH, parser);

@@ -8,6 +8,8 @@ public class AuthorComparator implements Comparator<Book> {
 
     @Override
     public int compare(Book o1, Book o2) {
-	   return o1.getAuthor().compareTo(o2.getAuthor());
+	   String firstAuthor = o1.getAuthor();
+	   String secondAuthor = o2.getAuthor();
+	   return firstAuthor.compareTo(secondAuthor);
     }
 }

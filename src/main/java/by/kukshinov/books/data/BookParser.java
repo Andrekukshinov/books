@@ -48,9 +48,9 @@ public class BookParser {
     }
 
 
-    public Book parse(String stringBook) throws ModelException {
+    public Book parse(String stringBook) throws ParserException {
 	   if (!stringBook.startsWith(bookPrefix)) {
-		  throw new ModelException("String " + stringBook + " doesn't match format " + new Book("auth", 222, "tit", "publ", BookType.DETECTIVE).toString());
+		  throw new ParserException("String " + stringBook + " doesn't match format " + new Book("auth", 222, "tit", "publ", BookType.DETECTIVE).toString());
 	   }
 	   Map<String, String> fieldData = new HashMap<>();
 	   String[] prefixesArray = new String[]{bookAuthor, bookPages, bookTitle, bookPublisher, bookType};

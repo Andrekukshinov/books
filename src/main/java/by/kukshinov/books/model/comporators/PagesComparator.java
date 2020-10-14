@@ -6,7 +6,9 @@ import java.util.Comparator;
 
 public class PagesComparator implements Comparator<Book> {
     @Override
-    public int compare(Book o1, Book o2) {
-	   return Integer.compare(o1.getPages(), o2.getPages());
+    public int compare(Book first, Book second) {
+	   int firstPages = first.getPages();
+	   int pages = second.getPages();
+	   return Integer.compare(firstPages, pages);
     }
 }

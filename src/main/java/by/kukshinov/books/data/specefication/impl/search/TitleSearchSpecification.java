@@ -1,5 +1,6 @@
 package by.kukshinov.books.data.specefication.impl.search;
 
+import by.kukshinov.books.data.access.DaoException;
 import by.kukshinov.books.model.Book;
 import by.kukshinov.books.model.ModelException;
 import by.kukshinov.books.data.specefication.SearchSpecification;
@@ -11,12 +12,13 @@ public class TitleSearchSpecification extends SearchSpecification {
 
     @Override
     protected boolean matches(Book book, String value) {
-	   return book.getTitle().equalsIgnoreCase(value);
+	   String bookTitle = book.getTitle();
+	   return bookTitle.equalsIgnoreCase(value);
     }
 
     @Override
-    protected ModelException throwException(String value) {
-	   return new ModelException("Book \"" + value + "\"" + " not found");
+    protected DaoException throwException(String value) {
+	   return new DaoException("Book \"" + value + "\"" + " not found");
     }
 }
 

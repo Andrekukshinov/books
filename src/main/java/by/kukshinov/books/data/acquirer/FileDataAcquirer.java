@@ -1,6 +1,8 @@
 package by.kukshinov.books.data.acquirer;
 
 import by.kukshinov.books.data.BookParser;
+import by.kukshinov.books.data.DataException;
+import by.kukshinov.books.data.access.DaoException;
 import by.kukshinov.books.model.Book;
 import by.kukshinov.books.model.ModelException;
 
@@ -19,12 +21,12 @@ public class FileDataAcquirer implements DataAcquirer {
 	   this.parser = parser;
     }
 
-    private Book getData(String stringBook) throws ModelException {
+    private Book getData(String stringBook) throws DataException {
 		  return parser.parse(stringBook);
     }
 
     @Override
-    public List<Book> getBooks() throws IOException, ModelException{
+    public List<Book> getBooks() throws IOException, DataException {
         List<Book> books = new ArrayList<>();
 	   try (BufferedReader reader = new BufferedReader(new FileReader(filePath))){
 	       String current;

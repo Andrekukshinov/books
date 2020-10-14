@@ -3,11 +3,11 @@ package by.kukshinov.books.model;
 import java.util.Objects;
 
 public class Book {
-    private String author;
-    private int pages;
-    private String title;
-    private String publisher;
-    private BookType type;
+    private final String author;
+    private final int pages;
+    private final String title;
+    private final String publisher;
+    private final BookType type;
 
     public Book(String author, int pages, String title, String publisher, BookType type) {
 	   this.author = author;
@@ -39,15 +39,25 @@ public class Book {
 
     @Override
     public String toString() {
-	   return "Book{" + "author=" + author +  ", pages=" + pages + ", title=" + title + ", publisher=" + publisher + ", type=" + type + '}';
+	   return "Book{" + "author=" + author +  ", pages=" + pages +
+			 ", title=" + title + ", publisher=" + publisher +
+			 ", type=" + type + '}';
     }
 
     @Override
     public boolean equals(Object o) {
-	   if (this == o) return true;
-	   if (o == null || getClass() != o.getClass()) return false;
+	   if (this == o) {
+		  return true;
+	   }
+	   if (o == null || getClass() != o.getClass()) {
+		  return false;
+	   }
 	   Book book = (Book) o;
-	   return getPages() == book.getPages() && Objects.equals(getAuthor(), book.getAuthor()) && Objects.equals(getTitle(), book.getTitle()) && Objects.equals(getPublisher(), book.getPublisher()) && getType() == book.getType();
+	   return getPages() == book.getPages() &&
+			 Objects.equals(getAuthor(), book.getAuthor()) &&
+			 Objects.equals(getTitle(), book.getTitle()) &&
+			 Objects.equals(getPublisher(), book.getPublisher()) &&
+			 getType() == book.getType();
     }
 
     @Override
