@@ -11,8 +11,9 @@ import java.util.List;
 public class DaoListFiller {
     private static final Logger LOGGER =
 		  Logger.getLogger(DaoListFiller.class);
-    public void insertIntoDao(BookDao dao, List<Book> books)  {
-	   for (Book book: books) {
+
+    public void insertIntoDao(BookDao dao, List<Book> books) {
+	   for (Book book : books) {
 		  try {
 			 dao.addBook(book);
 		  } catch (DaoException e) {
