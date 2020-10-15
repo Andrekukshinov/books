@@ -39,9 +39,13 @@ public class Book {
 
     @Override
     public String toString() {
-	   return "Book{" + "author=" + author +  ", pages=" + pages +
-			 ", title=" + title + ", publisher=" + publisher +
-			 ", type=" + type + '}';
+	   String format = String.format("Book{author=%s, pages=%d, title=%s, publisher=%s, type=}%s",
+			 author,
+			 pages,
+			 title,
+			 publisher,
+			 type.toString());
+	   return format;
     }
 
     @Override

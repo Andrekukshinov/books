@@ -30,10 +30,10 @@ public class SearchSpecificationTest {
     private static final List<Book> originalBooks = Arrays.asList(firstBook, secondBook, thirdBook, fourthBook, fifthBook);
 
 
-    private final Book bookToLook4ByPages = new Book("S. King", 324, "IT", "3DO", BookType.HORROR);
+    private static final Book bookToLook4ByPages = new Book("S. King", 324, "IT", "3DO", BookType.HORROR);
 
     @Test
-    public void shouldReturnBookListByTitle() throws DaoException {
+    public void shouldReturnBookListByTitle() {
 	   //given
 	   List<Book> startList = new ArrayList<>(originalBooks);
 	   SearchSpecification titleSearch = new TitleSearchSpecification();
@@ -46,7 +46,7 @@ public class SearchSpecificationTest {
     }
 
     @Test
-    public void shouldReturnBookListByPublisher() throws DaoException {
+    public void shouldReturnBookListByPublisher() {
 	   //given
 	   List<Book> startList = new ArrayList<>(originalBooks);
 	   SearchSpecification publisherSearch = new PublisherSearchSpecification();
@@ -60,7 +60,7 @@ public class SearchSpecificationTest {
     }
 
     @Test
-    public void shouldReturnBookListByPages() throws DaoException {
+    public void shouldReturnBookListByPages() {
 	   //given
 	   List<Book> startList = new ArrayList<>(originalBooks);
 	   SearchSpecification pageSearcher = new PageSearcherSpecification();
@@ -75,7 +75,7 @@ public class SearchSpecificationTest {
     }
 
     @Test
-    public void shouldReturnBookListByAuthor() throws DaoException {
+    public void shouldReturnBookListByAuthor() {
 	   //given
 	   List<Book> startList = new ArrayList<>(originalBooks);
 	   SearchSpecification authorSearch = new AuthorSearchSpecification();

@@ -13,7 +13,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FileDataAcquirer implements DataAcquirer {
+
     private final String filePath;
+
     private final BookParser parser;
 
     public FileDataAcquirer(String filePath, BookParser parser) {
@@ -22,17 +24,17 @@ public class FileDataAcquirer implements DataAcquirer {
     }
 
     private Book getData(String stringBook) throws DataException {
-		  return parser.parse(stringBook);
+	   return parser.parse(stringBook);
     }
 
     @Override
     public List<Book> getBooks() throws IOException, DataException {
-        List<Book> books = new ArrayList<>();
-	   try (BufferedReader reader = new BufferedReader(new FileReader(filePath))){
-	       String current;
-	       while ((current = reader.readLine()) != null) {
-	           Book currentBook = getData(current);
-	           books.add(currentBook);
+	   List<Book> books = new ArrayList<>();
+	   try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
+		  String current;
+		  while ((current = reader.readLine()) != null) {
+			 Book currentBook = getData(current);
+			 books.add(currentBook);
 		  }
 	   }
 	   return books;
