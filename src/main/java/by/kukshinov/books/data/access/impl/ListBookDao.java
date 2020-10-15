@@ -40,7 +40,7 @@ public class ListBookDao implements BookDao {
     }
 
     @Override
-    public List<Book> findBooks(BookField param, String value) throws DaoException {
+    public List<Book> findBooks(BookField param, String value) {
         SearchSpecification searchSpecification =
                 searchSpecificationCreator.createSearchSpecification(param);
 	   return searchSpecification.findBook(localBookStorage, value);

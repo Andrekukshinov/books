@@ -16,7 +16,9 @@ public class AuthorSearchSpecification extends SearchSpecification {
     }
 
     @Override
-    protected DaoException throwException(String value) {
-	   return new DaoException(value + "'s book not found");
+    protected String getMassage(String value) {
+	   return String.format("%s's book not found", value );
     }
+
+
 }

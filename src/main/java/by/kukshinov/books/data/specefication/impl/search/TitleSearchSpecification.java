@@ -17,8 +17,8 @@ public class TitleSearchSpecification extends SearchSpecification {
     }
 
     @Override
-    protected DaoException throwException(String value) {
-	   return new DaoException("Book \"" + value + "\"" + " not found");
+    protected String getMassage(String value) {
+	   return String.format("Book \"%s\" not found", value);
     }
 }
 

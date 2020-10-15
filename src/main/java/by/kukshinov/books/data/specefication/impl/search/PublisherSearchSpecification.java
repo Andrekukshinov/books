@@ -17,7 +17,7 @@ public class PublisherSearchSpecification extends SearchSpecification {
     }
 
     @Override
-    protected DaoException throwException(String value) {
-	   return new DaoException("Books published by " + value + " not found");
+    protected String getMassage(String value) {
+	   return String.format("Books published by %s not found", value);
     }
 }

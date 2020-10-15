@@ -11,7 +11,7 @@ public interface BookDao {
 
     void addBook(Book book) throws DaoException;
 
-    List<Book> findBooks(BookField searchParam, String value) throws DaoException;
+    List<Book> findBooks(BookField searchParam, String value);
 
     void remove(Book book) throws ModelException;
 

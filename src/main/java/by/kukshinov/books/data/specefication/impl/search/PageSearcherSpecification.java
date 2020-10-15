@@ -12,12 +12,12 @@ public class PageSearcherSpecification extends SearchSpecification {
 
     @Override
     protected boolean matches(Book book, String value) {
-        int pages = Integer.parseInt(value);;
+        int pages = Integer.parseInt(value);
 	   return book.getPages() == pages;
     }
 
     @Override
-    protected DaoException throwException(String value) {
-	   return new DaoException("Book with " + value + " pages not found");
+    protected String getMassage(String value) {
+	   return String.format("Book with %s pages not found.", value);
     }
 }
