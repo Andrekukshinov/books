@@ -11,14 +11,15 @@ import java.util.List;
 
 public class FileDataPrinter implements DataPrinter {
     private final String filePath;
-	public static final Logger LOGGER = Logger.getLogger(FileDataPrinter.class);
+    public static final Logger LOGGER = Logger.getLogger(FileDataPrinter.class);
+
     public FileDataPrinter(String filePath) {
 	   this.filePath = filePath;
     }
 
     @Override
     public void printData(Book book) {
-	   try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath, true))){
+	   try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath, true))) {
 		  writer.write(book.toString());
 		  writer.write("\n");
 	   } catch (IOException e) {
