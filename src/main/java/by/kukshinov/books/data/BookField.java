@@ -1,6 +1,6 @@
 package by.kukshinov.books.data;
 
-public enum  BookField {
+public enum BookField {
     AUTHOR,
     TITLE,
     PAGE,

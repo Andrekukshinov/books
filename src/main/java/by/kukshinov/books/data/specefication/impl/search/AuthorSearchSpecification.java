@@ -13,7 +13,7 @@ public class AuthorSearchSpecification extends SearchSpecification {
 
     @Override
     protected String getMassage(String value) {
-	   return String.format("%s's book not found", value );
+	   return String.format("%s's book not found", value);
     }
 
 

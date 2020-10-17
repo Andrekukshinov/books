@@ -1,10 +1,10 @@
 package by.kukshinov.books.data.factory.impl;
 
 
+import by.kukshinov.books.data.BookParser;
 import by.kukshinov.books.data.acquirer.DataAcquirer;
 import by.kukshinov.books.data.acquirer.FileDataAcquirer;
 import by.kukshinov.books.data.factory.DataAcquirerCreator;
-import by.kukshinov.books.data.BookParser;
 
 public class FileDataAcquirerCreator implements DataAcquirerCreator {
 

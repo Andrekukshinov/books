@@ -10,17 +10,18 @@ import by.kukshinov.books.data.specefication.impl.search.TitleSearchSpecificatio
 
 public class SearchSpecificationCreator {
     public SearchSpecification createSearchSpecification(BookField param) {
-        switch(param) {
-            case PAGE:
-                return new PageSearcherSpecification();
-            case AUTHOR:
-                return new AuthorSearchSpecification();
-            case TITLE:
-                return new TitleSearchSpecification();
-            case PUBLISHER:
-                return new PublisherSearchSpecification();
-            default:
-                throw new IllegalArgumentException(String.format("Searching by %s is disabled", param));
-        }
+	   switch (param) {
+		  case PAGE:
+			 return new PageSearcherSpecification();
+		  case AUTHOR:
+			 return new AuthorSearchSpecification();
+		  case TITLE:
+			 return new TitleSearchSpecification();
+		  case PUBLISHER:
+			 return new PublisherSearchSpecification();
+		  default:
+			 throw new IllegalArgumentException(
+				    String.format("Searching by %s is disabled", param));
+	   }
     }
 }

@@ -22,49 +22,53 @@ public class ListBookDao implements BookDao {
 
     private final SearchSpecificationCreator searchSpecificationCreator;
 
-    public ListBookDao(SortSpecificationCreator sortSpecificationCreator,
-                       SearchSpecificationCreator searchSpecificationCreator) {
-        this.sortSpecificationCreator = sortSpecificationCreator;
-        this.searchSpecificationCreator = searchSpecificationCreator;
+    public ListBookDao(
+		  SortSpecificationCreator sortSpecificationCreator,
+		  SearchSpecificationCreator searchSpecificationCreator
+    ) {
+	   this.sortSpecificationCreator = sortSpecificationCreator;
+	   this.searchSpecificationCreator = searchSpecificationCreator;
     }
 
 
     @Override
     public void addBook(Book book) throws DaoException {
-        if (localBookStorage.contains(book)) {
-            String stringBook = book.toString();
-            String massage = String.format("Book %s already exists! ", stringBook);
-            throw new DaoException(massage);
-        }
-        localBookStorage.add(book);
+	   if (localBookStorage.contains(book)) {
+		  String stringBook = book.toString();
+		  String massage = String
+				.format("Book %s already exists! ", stringBook);
+		  throw new DaoException(massage);
+	   }
+	   localBookStorage.add(book);
     }
 
     @Override
     public List<Book> findBooks(BookField param, String value) {
-        SearchSpecification searchSpecification =
-                searchSpecificationCreator.createSearchSpecification(param);
+	   SearchSpecification searchSpecification = searchSpecificationCreator
+			 .createSearchSpecification(param);
 	   return searchSpecification.findBook(localBookStorage, value);
     }
 
     @Override
     public void remove(Book book) throws ModelException {
-        boolean result = localBookStorage.remove(book);
-        if (!result) {
-            String stringBook = book.toString();
-            String massage = String.format("Book %s doesn't exists! ", stringBook);
-            throw new ModelException(massage);
-        }
+	   boolean result = localBookStorage.remove(book);
+	   if (!result) {
+		  String stringBook = book.toString();
+		  String massage = String
+				.format("Book %s doesn't exists! ", stringBook);
+		  throw new ModelException(massage);
+	   }
     }
 
     @Override
     public List<Book> sort(BookField param) {
-        SortBookSpecification sortSpecification =
-                sortSpecificationCreator.createSortSpecification(param);
+	   SortBookSpecification sortSpecification = sortSpecificationCreator
+			 .createSortSpecification(param);
 	   return sortSpecification.sort(localBookStorage);
     }
 
     @Override
     public int getSize() {
-        return localBookStorage.size();
+	   return localBookStorage.size();
     }
 }

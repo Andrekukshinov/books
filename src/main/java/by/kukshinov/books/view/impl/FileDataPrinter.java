@@ -19,7 +19,8 @@ public class FileDataPrinter implements DataPrinter {
 
     @Override
     public void printData(Book book) {
-	   try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath, true))) {
+	   try (BufferedWriter writer = new BufferedWriter(
+			 new FileWriter(filePath, true))) {
 		  writer.write(book.toString());
 		  writer.write("\n");
 	   } catch (IOException e) {

@@ -1,9 +1,6 @@
 package by.kukshinov.books.data.specefication;
 
-import by.kukshinov.books.data.DataException;
-import by.kukshinov.books.data.access.DaoException;
 import by.kukshinov.books.model.Book;
-import by.kukshinov.books.model.ModelException;
 import org.apache.log4j.Logger;
 
 import java.util.ArrayList;
@@ -11,8 +8,8 @@ import java.util.List;
 
 public abstract class SearchSpecification {
 
-    private static final Logger LOGGER =
-		  Logger.getLogger(SearchSpecification.class);
+    private static final Logger LOGGER = Logger
+		  .getLogger(SearchSpecification.class);
 
     protected abstract boolean matches(Book book, String value);
 

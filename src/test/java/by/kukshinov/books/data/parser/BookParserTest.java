@@ -9,12 +9,16 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class BookParserTest {
-    private final String bookString = "Book{author=Rowling, pages=234, title=Harry Potter and Phil stone, publisher=arsev, type=FANTASY}";
-    private final Book original = new Book("Rowling", 234, "Harry Potter and Phil stone", "arsev", BookType.FANTASY);
+    private final String bookString =
+		  "Book{author=Rowling, pages=234, title=Harry Potter and Phil stone, publisher=arsev, type=FANTASY}";
+    private final Book original =
+		  new Book("Rowling", 234, "Harry Potter and Phil stone", "arsev",
+				BookType.FANTASY);
 
 
     @Test
-    public void shouldParseStringDataOfSpecifiedFormatToBook() throws ParserException {
+    public void shouldParseStringDataOfSpecifiedFormatToBook()
+		  throws ParserException {
 	   //given
 	   BookParser parser = new BookParser();
 	   //when

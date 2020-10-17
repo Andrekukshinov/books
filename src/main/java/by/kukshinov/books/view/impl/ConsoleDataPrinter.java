@@ -8,7 +8,8 @@ import org.apache.log4j.Logger;
 import java.util.List;
 
 public class ConsoleDataPrinter implements DataPrinter {
-    private static final Logger LOGGER = Logger.getLogger(ConsoleDataPrinter.class);
+    private static final Logger LOGGER = Logger
+		  .getLogger(ConsoleDataPrinter.class);
 
     @Override
     public void printData(Book book) {

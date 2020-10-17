@@ -1,7 +1,6 @@
 package by.kukshinov.books.data.access;
 
 import by.kukshinov.books.data.BookField;
-import by.kukshinov.books.data.DataException;
 import by.kukshinov.books.model.Book;
 import by.kukshinov.books.model.ModelException;
 
