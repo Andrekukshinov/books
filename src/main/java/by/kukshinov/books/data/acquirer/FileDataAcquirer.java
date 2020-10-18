@@ -29,12 +29,12 @@ public class FileDataAcquirer implements DataAcquirer {
     public List<Book> getBooks() throws DataException {
 	   List<Book> books = new ArrayList<>();
 	   try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
-		  String current = null;
-		  do {
-		      current = reader.readLine();
+		  String current = reader.readLine();
+		  while (current != null) {
 			 Book currentBook = getData(current);
 			 books.add(currentBook);
-		  } while (current != null);
+			 current = reader.readLine();
+		  }
 	   } catch (IOException e) {
 		  throw new DataException(e.getMessage(), e);
 	   }

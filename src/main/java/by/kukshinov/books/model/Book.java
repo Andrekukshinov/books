@@ -10,9 +10,7 @@ public class Book {
     private final BookType type;
 
     public Book(
-		  String author, int pages, String title, String publisher,
-		  BookType type
-    ) {
+		  String author, int pages, String title, String publisher, BookType type) {
 	   this.author = author;
 	   this.pages = pages;
 	   this.title = title;
@@ -60,13 +58,13 @@ public class Book {
 	   return getPages() == book.getPages() && Objects
 			 .equals(getAuthor(), book.getAuthor()) && Objects
 			 .equals(getTitle(), book.getTitle()) && Objects
-			 .equals(getPublisher(),
-				    book.getPublisher()) && getType() == book.getType();
+			 .equals(getPublisher(), book.getPublisher()) && getType() == book
+			 .getType();
     }
 
     @Override
     public int hashCode() {
-	   return Objects.hash(getAuthor(), getPages(), getTitle(), getPublisher(),
-			 getType());
+	   return Objects
+			 .hash(getAuthor(), getPages(), getTitle(), getPublisher(), getType());
     }
 }
