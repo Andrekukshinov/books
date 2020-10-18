@@ -17,13 +17,11 @@ import by.kukshinov.books.view.factory.DataPrinterFactory;
 import by.kukshinov.books.view.factory.impl.FileDataPrinterFactory;
 import org.apache.log4j.Logger;
 
-import java.io.IOException;
 import java.util.List;
 
 public class BookApplication {
 
-    private static final Logger LOGGER = Logger
-		  .getLogger(BookApplication.class);
+    private static final Logger LOGGER = Logger.getLogger(BookApplication.class);
 
     public static void main(String[] args) {
 	   LOGGER.info("started");
@@ -42,9 +40,8 @@ public class BookApplication {
     }
 
     private static void run(
-		  DataAcquirer acquirer, BookDao bookDAO, DaoListFiller filler
-    )throws ModelException, DataException {
-
+		  DataAcquirer acquirer, BookDao bookDAO,
+		  DaoListFiller filler) throws ModelException, DataException {
 	   List<Book> books = acquirer.getBooks();
 	   Book bookForActions = books.get(1);
 	   filler.insertIntoDao(bookDAO, books);

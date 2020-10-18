@@ -24,8 +24,7 @@ public class ListBookDao implements BookDao {
 
     public ListBookDao(
 		  SortSpecificationCreator sortSpecificationCreator,
-		  SearchSpecificationCreator searchSpecificationCreator
-    ) {
+		  SearchSpecificationCreator searchSpecificationCreator) {
 	   this.sortSpecificationCreator = sortSpecificationCreator;
 	   this.searchSpecificationCreator = searchSpecificationCreator;
     }
@@ -35,8 +34,7 @@ public class ListBookDao implements BookDao {
     public void addBook(Book book) throws DaoException {
 	   if (localBookStorage.contains(book)) {
 		  String stringBook = book.toString();
-		  String massage = String
-				.format("Book %s already exists! ", stringBook);
+		  String massage = String.format("Book %s already exists! ", stringBook);
 		  throw new DaoException(massage);
 	   }
 	   localBookStorage.add(book);
@@ -54,8 +52,7 @@ public class ListBookDao implements BookDao {
 	   boolean result = localBookStorage.remove(book);
 	   if (!result) {
 		  String stringBook = book.toString();
-		  String massage = String
-				.format("Book %s doesn't exists! ", stringBook);
+		  String massage = String.format("Book %s doesn't exists! ", stringBook);
 		  throw new ModelException(massage);
 	   }
     }

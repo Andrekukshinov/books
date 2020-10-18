@@ -8,8 +8,7 @@ import java.util.List;
 
 public abstract class SearchSpecification {
 
-    private static final Logger LOGGER = Logger
-		  .getLogger(SearchSpecification.class);
+    private static final Logger LOGGER = Logger.getLogger(SearchSpecification.class);
 
     protected abstract boolean matches(Book book, String value);
 

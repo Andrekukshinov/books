@@ -16,8 +16,7 @@ public class BookParser {
 
     private int getDataLength(String stringBook) {
 	   int runner = 0;
-	   while (stringBook.charAt(runner) != ',' && (runner < stringBook
-			 .length() - 1)) {
+	   while (stringBook.charAt(runner) != ',' && (runner < stringBook.length() - 1)) {
 		  ++runner;
 	   }
 	   return runner;
@@ -29,9 +28,7 @@ public class BookParser {
     }
 
     private void fillFieldData(
-		  String stringBook, Map<String, String> fieldData,
-		  String[] prefixesArray
-    ) {
+		  String stringBook, Map<String, String> fieldData, String[] prefixesArray) {
 	   for (String s : prefixesArray) {
 		  if (stringBook.startsWith(s)) {
 			 stringBook = stringBook.replace(s, "");
@@ -47,28 +44,24 @@ public class BookParser {
     }
 
     private String getFiledValue(
-		  Map<String, String> fieldData, String bookFieldPrefix
-    ) {
+		  Map<String, String> fieldData, String bookFieldPrefix) {
 	   return fieldData.get(getFiledName(bookFieldPrefix));
     }
 
 
     public Book parse(String stringBook) throws ParserException {
 	   if (!stringBook.startsWith(BOOK_PREFIX)) {
-		  Book book = new Book("auth", 222, "tit", "publ",
-				BookType.DETECTIVE);
+		  Book book = new Book("auth", 222, "tit", "publ", BookType.DETECTIVE);
 		  String bookFormat = book.toString();
 		  String massage = String
-				.format("String %s doesn't match format %s", bookFormat,
-					   stringBook);
+				.format("String %s doesn't match format %s", bookFormat, stringBook);
 		  throw new ParserException(massage);
 	   }
 	   Map<String, String> fieldData = new HashMap<>();
-	   String[] prefixesArray = new String[]{BOOK_AUTHOR, BOOK_PAGES,
-			 BOOK_TITLE, BOOK_PUBLISHER, BOOK_TYPE};
+	   String[] prefixesArray = new String[]{BOOK_AUTHOR, BOOK_PAGES, BOOK_TITLE,
+			 BOOK_PUBLISHER, BOOK_TYPE};
 
-	   fillFieldData(stringBook.replace(BOOK_PREFIX, ""), fieldData,
-			 prefixesArray);
+	   fillFieldData(stringBook.replace(BOOK_PREFIX, ""), fieldData, prefixesArray);
 
 	   String author = getFiledValue(fieldData, BOOK_AUTHOR);
 	   int pages = Integer.parseInt(getFiledValue(fieldData, BOOK_PAGES));
